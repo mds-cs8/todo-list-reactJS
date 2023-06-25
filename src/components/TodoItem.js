@@ -34,7 +34,7 @@ export default function TodoItem({ id, title, description, date, isDone }) {
   function changeIsDone() {
     // FUNCTION TO DONE TODO
     const CheckList = todos.map((item) => {
-      if (item.id == id) {
+      if (item.id === id) {
         item.isDone = !item.isDone;
       }
       return item;
@@ -45,7 +45,7 @@ export default function TodoItem({ id, title, description, date, isDone }) {
   function editTodos() {
     // FUNCTION TO DONE TODO
     const edit = todos.map((item) => {
-      if (item.id == id) {
+      if (item.id === id) {
         item.title = editTodo.title;
         item.description = editTodo.description;
       }
@@ -59,7 +59,7 @@ export default function TodoItem({ id, title, description, date, isDone }) {
 
   function deleteTodo() {
     const Delete = todos.filter((item) => {
-      return item.id != id;
+      return item.id !== id;
     });
     setTodos(Delete);
     localStorage.setItem("todos", JSON.stringify(Delete));

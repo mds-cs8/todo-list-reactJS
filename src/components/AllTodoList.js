@@ -84,12 +84,13 @@ export default function AllTodoList() {
     return !item.isDone;
   });
 
-  let showTodo =
-    displayTodo == "done"
-      ? doneTodo
-      : displayTodo == "not-done"
-      ? notDoneTodo
-      : todos;
+  let showTodo = todos;
+  if (displayTodo === "done") {
+    showTodo = doneTodo;
+  } else if (displayTodo === "not-done") {
+    showTodo = notDoneTodo;
+  }
+
   const show = showTodo.map((item) => {
     // CREATE TODO
     return (

@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import AllTodoList from "./components/AllTodoList";
 import { createTheme, ThemeProvider } from "@mui/material/styles";

@@ -104,11 +104,11 @@ export default function AllTodoList() {
       />
     );
   });
-
   useEffect(() => {
-    const valueInLocalStorage = JSON.parse(localStorage.getItem("todos"));
-    return setTodos(valueInLocalStorage);
-  }, [todos]);
+    console.log("calling use effect");
+    const storageTodos = JSON.parse(localStorage.getItem("todos")) ?? [];
+    setTodos(storageTodos);
+  }, []);
   return (
     <Container maxWidth="sm">
       <Card

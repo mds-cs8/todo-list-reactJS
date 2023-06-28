@@ -10,7 +10,6 @@
   min-height: 100vh;
   background-image: linear-gradient(to top, #222831 0%, #222831 100%);
   width: 100%;
-
   direction: rtl;
   box-sizing: border-box;
   font-family: todoFont !important;
@@ -51,6 +50,7 @@
   color: #2e8a99 !important;
   transition: all 0.2s linear;
   transform: scale(1.2);
+  /* color: #0e295472; */
 }
 
 /* FONT CUSTTOM */

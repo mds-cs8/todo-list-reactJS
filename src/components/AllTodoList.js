@@ -203,6 +203,7 @@ export default function AllTodoList() {
       />
     );
   });
+
   useEffect(() => {
     // USE EFFECT TO RENDER GET LOCAL STORAGE 1 TIME
     console.log("calling use effect");
@@ -435,7 +436,13 @@ export default function AllTodoList() {
             {/*----------------------------------------------/}
 
           {/* we add todo item here */}
-            <div className="card">{show}</div>
+            <div className="card">
+              {todos.length === 0 ? (
+                <h2 style={{ color: "#0e295472" }}>لا توجد مهام ...</h2>
+              ) : (
+                show
+              )}
+            </div>
             {/*-----------------------------/}
 
           {/* add item input */}
